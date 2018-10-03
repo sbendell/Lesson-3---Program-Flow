@@ -20,11 +20,30 @@ int fac(int x) {
 	return facSum;
 }
 
+bool Positive(int x) {
+	if (x >= 0)
+		return true;
+	else
+		return false;
+}
+
 int main() {
 
 	int total = 0;
 
 	int x;
+
+	cout << "Please enter a number.";
+	bool isPositive = Positive(5);
+	if (isPositive)
+		cout << "The number you entered is positive or equal to 0";
+	else
+		cout << "The number you entered is negative.";
+	isPositive = Positive(-5);
+	if (isPositive)
+		cout << "The number you entered is positive or equal to 0";
+	else
+		cout << "The number you entered is negative.";
 
 	cout << "Please enter numbers, will finish if sum of factorals exceeds 2000" << "\n";
 
