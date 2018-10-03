@@ -36,14 +36,14 @@ int main() {
 	cout << "Please enter a number.";
 	bool isPositive = Positive(5);
 	if (isPositive)
-		cout << "The number you entered is positive or equal to 0";
+		cout << "\nThe number you entered is positive or equal to 0";
 	else
-		cout << "The number you entered is negative.";
+		cout << "\nThe number you entered is negative.";
 	isPositive = Positive(-5);
 	if (isPositive)
-		cout << "The number you entered is positive or equal to 0";
+		cout << "\nThe number you entered is positive or equal to 0";
 	else
-		cout << "The number you entered is negative.";
+		cout << "\nThe number you entered is negative.";
 
 	cout << "Please enter numbers, will finish if sum of factorals exceeds 2000" << "\n";
 
