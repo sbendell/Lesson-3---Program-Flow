@@ -27,23 +27,26 @@ bool Positive(int x) {
 		return false;
 }
 
+void LoopUntilPositive() {
+	int x = 1;
+	while (x >= 0) {
+		cout << "Please enter a number.\n";
+		cin >> x;
+		bool isPositive = Positive(x);
+		if (isPositive)
+			cout << "The number you entered is positive or equal to 0\n";
+		else
+			cout << "The number you entered is negative.\n";
+	}
+}
+
 int main() {
 
 	int total = 0;
 
 	int x;
 
-	cout << "Please enter a number.";
-	bool isPositive = Positive(5);
-	if (isPositive)
-		cout << "\nThe number you entered is positive or equal to 0";
-	else
-		cout << "\nThe number you entered is negative.";
-	isPositive = Positive(-5);
-	if (isPositive)
-		cout << "\nThe number you entered is positive or equal to 0";
-	else
-		cout << "\nThe number you entered is negative.";
+	LoopUntilPositive();
 
 	cout << "Please enter numbers, will finish if sum of factorals exceeds 2000" << "\n";
 
