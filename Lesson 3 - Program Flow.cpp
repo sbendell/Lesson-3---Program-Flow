@@ -11,12 +11,10 @@ int add(int x, int y) {
 }
 
 int fac(int x) {
-
 	int facSum = 1;
-
-	for (int count = x; count > 0; count--)
-		facSum = facSum * count;
-
+	if (x <= 1)
+		return facSum;
+	facSum = facSum * x * fac(x-1);
 	return facSum;
 }
 
@@ -45,7 +43,9 @@ int main() {
 	int total = 0;
 
 	int x;
-
+	cout << "Enter number to calculate factorial.";
+	cin >> x;
+	cout << fac(x);
 	LoopUntilPositive();
 
 	cout << "Please enter numbers, will finish if sum of factorals exceeds 2000" << "\n";
